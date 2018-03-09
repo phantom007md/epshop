@@ -3,7 +3,6 @@
 namespace App;
 
 
-class User extends Model
+class Comment extends Model
 {
-
 }

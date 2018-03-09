@@ -3,7 +3,7 @@
 namespace App;
 
 
-class User extends Model
+class Admin extends Model
 {
 
 }
