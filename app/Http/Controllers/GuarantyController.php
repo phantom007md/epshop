@@ -10,8 +10,8 @@ class GuarantyController extends Controller
 
     public function index()
     {
-        $guaranties = Guaranty::all();
-        return view('guaranties.index',  compact('guaranties'));
+        return $guaranties = Guaranty::all();
+//        return view('guaranties.index',  compact('guaranties'));
     }
 
     public function create()

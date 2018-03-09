@@ -9,8 +9,8 @@ class CommentController extends Controller
 {
     public function index ()
     {
-        $comments = Comment::all();
-        return view('comments.index', compact('comments'));
+        return $comments = Comment::all();
+//        return view('comments.index', compact('comments'));
     }
 
     public function create()
