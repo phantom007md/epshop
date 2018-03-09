@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form method="post" action="/product">
+<form method="post" action="/products">
     @csrf
     <lable>name:</lable>
     <input type="text" name="name">
@@ -32,7 +32,7 @@
         @endforeach
     </select>
     <br>
-    <lable>admin j:</lable>
+    <lable>admin :</lable>
     <select name="admin_id">
         @foreach($admins as $admin)
             <option value="{{ $admin->id }}">{{ $admin->name }}</option>

@@ -35,7 +35,6 @@ class ProductController extends Controller
             'price' => $request->price,
             'img' => $request->img,
             'guaranty_id' => $request->guaranty_id,
-            'comment_id' => $request->comment_id,
             'admin_id' => $request->admin_id,
         ]);
 

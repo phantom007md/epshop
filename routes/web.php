@@ -35,3 +35,9 @@ Route::get('users', 'UserController@index')->name('users.index');
 Route::get('users/create', 'UserController@create');
 Route::post('users', 'UserController@store');
 Route::get('users/{user}', 'UserController@destroy');
+
+// Comments Routes.
+Route::get('comments', 'CommentController@index')->name('comments.index');
+Route::get('comments/create', 'CommentController@create');
+Route::post('comments', 'CommentController@store');
+Route::get('comments/{comment}', 'CommentController@destroy');
