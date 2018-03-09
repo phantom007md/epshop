@@ -5,5 +5,8 @@ namespace App;
 
 class Guaranty extends Model
 {
-    protected $guarded = [];
+    public function Products ()
+    {
+        $this->belongsToMany(Products::class);
+    }
 }
