@@ -20,8 +20,19 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->text('body');
             $table->string('img')->nullable();
-            $table->integer('guaranty_id');
-            $table->integer('user_id');
+
+            $table->integer('guaranty_id')->unsigned()->nullable();
+            $table->foreign('guaranty_id')->references('id')
+                ->on('guaranties')
+                ->onDelete('set null')
+                ->onUpdate('cascade');
+
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')
+                ->on('users')
+                ->onDelete('set null')
+                ->onUpdate('cascade');
+
             $table->timestamps();
         });
     }
