@@ -7,11 +7,11 @@ class Comment extends Model
 {
     public function Product ()
     {
-        $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class);
     }
 
     public function User()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }

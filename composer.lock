@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e92333a33b2b9e052748f1cf7c23851",
+    "content-hash": "076a6333162326fdbec3d87cbf5dfb77",
     "packages": [
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "3.0.43",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "73087e07f164e2746bec1c9c116668d100e0af3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/73087e07f164e2746bec1c9c116668d100e0af3b",
+                "reference": "73087e07f164e2746bec1c9c116668d100e0af3b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.10"
+            },
+            "suggest": {
+                "ablunier/laravel-lang-installer": "Command for easily add languages to a Laravel project",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2018-01-28T10:19:47+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -2220,6 +2262,39 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "ybazli/faker",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ybazli/faker.git",
+                "reference": "8ed1b8a5a658e2bb028f62eb6186e534a7972448"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ybazli/faker/zipball/8ed1b8a5a658e2bb028f62eb6186e534a7972448",
+                "reference": "8ed1b8a5a658e2bb028f62eb6186e534a7972448",
+                "shasum": ""
+            },
+            "type": "laravel",
+            "autoload": {
+                "psr-4": {
+                    "Ybazli\\Faker\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ybazli",
+                    "email": "Yashar.bazli@gmail.com"
+                }
+            ],
+            "description": "Persian fake data package for laravel",
+            "time": "2018-02-22T14:29:51+00:00"
         }
     ],
     "packages-dev": [

@@ -7,6 +7,6 @@ class Guaranty extends Model
 {
     public function Products ()
     {
-        $this->belongsToMany(Products::class);
+        return $this->belongsToMany(Products::class);
     }
 }

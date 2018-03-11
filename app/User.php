@@ -7,6 +7,11 @@ class User extends Model
 {
     public function comments ()
     {
-        $this->hasMany(Comments::class);
+        return $this->hasMany(Comments::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
     }
 }

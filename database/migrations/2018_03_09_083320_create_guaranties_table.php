@@ -16,7 +16,7 @@ class CreateGuarantiesTable extends Migration
         Schema::create('guaranties', function (Blueprint $table) {
             $table->increments('id');
             $table->string('company');
-            $table->string('exp_time');
+            $table->timestamp('exp_time');
             $table->timestamps();
         });
     }

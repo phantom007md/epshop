@@ -10,14 +10,14 @@ class Product extends Model
         return $this->belongsToMany(Guaranty::class);
     }
 
-    public function admin()
+    public function user()
     {
-        return $this->belongsTo(Admin::class);
+        return $this->belongsTo(User::class);
     }
 
     public function comments ()
     {
-        $this->hasMany(Commets::class);
+        return $this->hasMany(Commets::class);
     }
 
 }

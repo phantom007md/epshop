@@ -18,10 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->string('price');
-            $table->string('body');
+            $table->text('body');
             $table->string('img')->nullable();
             $table->integer('guaranty_id');
-            $table->integer('admin_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
