@@ -14,16 +14,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
-        return $products;
-//        return view('products.index', compact('products'));
-    }
-
-    public function create()
-    {
-        $guaranties = Guaranty::all();
-        $admins= Admin::all();
-        return view('products.create', compact('guaranties', 'admins'));
+        return $products = Product::all();
     }
 
     public function store(Request $request)
@@ -35,33 +26,31 @@ class ProductController extends Controller
             'price' => $request->price,
             'img' => $request->img,
             'guaranty_id' => $request->guaranty_id,
-            'admin_id' => $request->admin_id,
+            'user_id' => $request->user_id,
         ]);
-
-        return redirect()->route('home');
     }
 
 
     public function show(Product $product)
     {
-        //
-    }
-
-
-    public function edit(Product $product)
-    {
-        //
+        return $product;
     }
 
 
     public function update(Request $request, Product $product)
     {
-        //
+        $product->name = $request->name;
+        $product->type = $request->type;
+        $product->price = $request->price;
+        $product->body = $request->body;
+        $product->img = $request->img;
+        $product->guaranty_id = $request->guaranty_id;
+        $product->user_id = $request->user_id;
+        $product->save();
     }
 
     public function destroy(Product $product)
     {
         Product::destroy($product->id);
-        return redirect()->route('home');
     }
 }

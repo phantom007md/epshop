@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use function compact;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,12 +10,11 @@ class UserController extends Controller
     public function index ()
     {
         return $users = User::all();
-//        return view('users.index', compact('users'));
     }
 
-    public function create ()
+    public function show (User $user)
     {
-        return view('users.create');
+        return $user;
     }
 
     public function store (Request $request)
@@ -25,8 +23,8 @@ class UserController extends Controller
             $request,
             [
                 'name' => 'required',
-                'email' => 'required|email',
-                'password' => 'required|confirmed',
+//                'email' => 'required|email',
+                'password' => 'required',
             ]
         );
 
@@ -34,15 +32,23 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'access_level' => $request->access_level,
         ]);
 
-        return redirect()->route('users.index');
+    }
 
+    public function update (Request $request, User $user)
+    {
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->access_level = $request->access_level;
+
+        $user->save();
     }
 
     public function destroy (User $user)
     {
         User::destroy($user->id);
-        return redirect()->route('users.index');
     }
 }

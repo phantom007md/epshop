@@ -11,12 +11,6 @@ class GuarantyController extends Controller
     public function index()
     {
         return $guaranties = Guaranty::all();
-//        return view('guaranties.index',  compact('guaranties'));
-    }
-
-    public function create()
-    {
-        return view('guaranties.create');
     }
 
 
@@ -24,15 +18,25 @@ class GuarantyController extends Controller
     {
         Guaranty::create([
             'company' => $request->company,
-            'exp_time' => $request->exp_time
+            'exp_time' => $request->exp_time,
         ]);
+    }
 
-        return redirect()->route('guaranties.index');
+    public function show (Guaranty $guaranty)
+    {
+        return $guaranty;
+    }
+
+    public function update (Request $request, Guaranty $guaranty)
+    {
+        $guaranty->company = $request->company;
+        $guaranty->exp_time = $request->exp_time;
+
+        $guaranty->save();
     }
 
     public function destroy(Guaranty $guaranty)
     {
-        Guaranty::destroy($guaranty);
-        return redirect()->route('guaranties.index');
+        Guaranty::destroy($guaranty->id);
     }
 }
