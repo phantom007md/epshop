@@ -7,7 +7,7 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
-header("Access-Control-Allow-Origin: http://localhost");
+header("Access-Control-Allow-Origin: *");
 
 define('LARAVEL_START', microtime(true));
 
