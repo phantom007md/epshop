@@ -17,6 +17,7 @@ class CreateGuarantiesTable extends Migration
             $table->increments('id');
             $table->string('company');
             $table->timestamp('exp_time');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

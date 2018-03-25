@@ -3,8 +3,14 @@
 namespace App;
 
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Comment extends Model
 {
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
     public function Product ()
     {
         return $this->belongsTo(Product::class);

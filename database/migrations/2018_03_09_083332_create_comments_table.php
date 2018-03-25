@@ -28,7 +28,7 @@ class CreateCommentsTable extends Migration
                 ->on('users')
                 ->onDelete('set null')
                 ->onUpdate('cascade');
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
