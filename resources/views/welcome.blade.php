@@ -26,6 +26,6 @@
     </style>
 </head>
 <body>
-<h1><a href="http://148.251.102.201/">Welcome To EPShop Test Server</a></h1>
+<h1><a href="http://epshop.liara.run/">Welcome To EPShop Test Server</a></h1>
 </body>
 </html>
